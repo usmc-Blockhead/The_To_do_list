@@ -6,8 +6,8 @@ from django.urls import reverse_lazy
 
 from django.contrib.auth.views import LoginView
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth import login
+from django.contrib.auth.forms import SignUpForm
+from django.contrib.auth import login, authenticate
 
 from .models import Task
 
@@ -21,9 +21,9 @@ class CustomLoginView(LoginView):
         return reverse_lazy('tasks')
 
 
-class RegisterPage(FormView):
+class RegisterPage(request):
     template_name = 'app/register.html'
-    form_class = UserCreationForm
+    form = SignUpForm(request.POST)
     redirect_authenticated_user = True
     success_url = reverse_lazy('tasks')
 
