@@ -16,8 +16,6 @@ def button_api(request):
     taskid = request.GET.get('taskid')
     complete = int(request.GET.get('complete',0))
     #Need to add database updates for actual changes
-    print(taskid)
-    print(complete)
     if complete:
         return HttpResponse(f"""<div class="task-complete-icon" onclick="updateButton('{taskid}', '0')"></div>""")
     return HttpResponse(f"""<div class="task-incomplete-icon" onclick="updateButton('{taskid}', '1')"></div>""")
