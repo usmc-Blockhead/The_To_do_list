@@ -51,11 +51,12 @@
 
 <script>
 function updateButton(a,b) {
-    const xhttp = new XMLHttpRequest();
+    const xhttp = new XMLHttpRequest(); 
     xhttp.onload = (e) =>{
             document.getElementById(`${arguments[0]}`).innerHTML = xhttp.responseText;
 }
-    xhttp.open("GET", `task-api/?taskid=${arguments[0]}&complete=${arguments[1]}`);
+    xhttp.open("POST", `task-api/?taskid=${arguments[0]}&complete=${arguments[1]}`);
+    xhttp.setRequestHeader("X-CSRFToken", "{{csrf_token}}");
     xhttp.send();
 }
 </script>
