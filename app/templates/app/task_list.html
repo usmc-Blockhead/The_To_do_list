@@ -32,15 +32,14 @@
     <div class="task-wrapper">
         {% if task.complete %}
         <div class="task-title">
-            <div class="task-complete-icon"></div>
-            <input class="complete-button" type="submit" value={{Tasks.complete}}>
-            <i><s><a href={% url 'task-update' task.id %}>{{task}}</a></s></i>
+            <div id="{{task.id}}"><div class="task-complete-icon" onclick="updateButton('{{task.id}}', '0')"></div></div>
+            <a href={% url 'task-update' task.id %}>{{task}}</a>
         </div>
         <a class="delete-link" href="{% url 'task-delete' task.id %}">&#215;</a>
         {% else %}
         <div class="task-title">
-            <div class="task-incomplete-icon"></div>
-            <a href={% url 'task-update' task.id %}>{{task}}</a>
+            <div id="{{task.id}}"><div class="task-incomplete-icon" onclick="updateButton('{{task.id}}', '1')"></div></div>
+            <i><s><a href={% url 'task-update' task.id %}>{{task}}</a></s></i>
         </div>
         <a class="delete-link" href="{% url 'task-delete' task.id %}">&#215;</a>
         {% endif %}
@@ -50,8 +49,16 @@
     {% endfor %}
 </div>
 
-
-    
+<script>
+function updateButton(a,b) {
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = (e) =>{
+            document.getElementById(`${arguments[0]}`).innerHTML = xhttp.responseText;
+}
+    xhttp.open("GET", `task-api/?taskid=${arguments[0]}&complete=${arguments[1]}`);
+    xhttp.send();
+}
+</script>
 
     
 

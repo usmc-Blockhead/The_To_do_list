@@ -3,7 +3,7 @@ from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView, FormView
 from django.urls import reverse_lazy
-
+from django.http import HttpResponse
 from django.contrib.auth.views import LoginView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.forms import UserCreationForm
@@ -11,6 +11,14 @@ from django.contrib.auth import login
 
 from .models import Task
 
+
+def button_api(request):
+    taskid = request.GET.get('taskid')
+    complete = int(request.GET.get('complete',0))
+    #Need to add database updates for actual changes
+    if complete:
+        return HttpResponse(f"""<div class="task-complete-icon" onclick="updateButton('{taskid}', '0')"></div>""")
+    return HttpResponse(f"""<div class="task-incomplete-icon" onclick="updateButton('{taskid}', '1')"></div>""")
 
 class CustomLoginView(LoginView):
     template_name = 'app/login.html'
@@ -51,6 +59,7 @@ class TaskList(LoginRequiredMixin, ListView):
         search_input = self.request.GET.get('search-area') or ''
         if search_input:
             context['tasks'] = context['tasks'].filter(title__icontains=search_input)
+
         context['search_input'] = search_input
         return context
 
