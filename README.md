@@ -19,7 +19,7 @@ for
 
 ![1669684298896](image/README/1669684298896.png)
 
-So I will be honest I struggled with a project.  I started several different projects and decided that they were not for me at the time.  So I admit I looked around for ideas online.  I came across a youtube programmer named Denise Ivy and he was able to explain things in ways that made sense in my head.  So I set out on a journey to create the app based on things I learned from him.  Yes he does teach people how to make a similar app, and I did watch his video, he explains how the different parts interact and made this project feel reachable.  Now you may say just doing a type-along does not count as my project.  Yes, I started with the type-along but I put in the time to make this count as my code, as I made many improvements to make it my own.
+So I will be honest I struggled with a project.  I started several different projects and decided that they were not for me at the time.  So I admit I looked around for ideas online.  I came across a youtube programmer named Vitor Freitas [https://simpleisbetterthancomplex.com/]() and he was able to explain things in ways that made sense in my head.  So I set out on a journey to create the app based on things I learned from him.  Yes he does teach people how to make a similar app, and I did watch his video, he explains how the different parts interact and made this project feel reachable.  Now you may say just doing a type-along does not count as my project.  I did not do a type-along I took different thing I learned from him and turned it into something, I put in the time to make this my code, and even made many improvements to make it better.
 
 The challenges I came across were many, but the main things I dealt with in this version were:
 
