@@ -2,6 +2,11 @@
 
 {% block content%}
 
+<div class="header-bar">
+    <a href="{% url 'tasks' %}">&#8592; back</a>
+</div>
+
 <h1>Task: {{task}}</h1>
+<p>Description: {{task.description}}</p>
 
 {% endblock content %}

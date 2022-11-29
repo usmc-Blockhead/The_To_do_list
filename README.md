@@ -1,4 +1,3 @@
-
 # **The_To_do_list**
 
 by
@@ -38,3 +37,35 @@ I feel like I have learned millions of things in this version of the project and
   * ![1669684095998](image/README/1669684095998.png)
 * Description field - I want to make better use of the description field, including rendering it on task_list.html how I would want it and making the information part of the notifications.
   * ![1669684151877](image/README/1669684151877.png)
+
+
+## **My video Notes**
+
+
+Hi, my name is christa cooper and this is my To-do list honor project for November 2022 Backend python graduation.
+
+It is a Django-based app, with HTML and CSS pages to keep track of To-Do tasks.  It uses many Django packages, including login, forms, mixins, and views.  As you can see it is a dashboard for tasks.  
+
+(log-out) it has user authentication, so it could be used by many people say in a household. 
+
+(register) so it also includes a way to register new users. 
+
+(login) As you can see every page looks the same, that was handled by creating the main template and applying it to all the pages, so changes are global.
+
+It greets the User by name and the number of incomplete tasks.
+
+(use search) There is a fully functional search feature.
+
+(hit add) You can add tasks with the plus sign. (make task)
+
+(open task)You can also complete a task with the check mark and it will cross it off.(complete task)
+
+(delete task) If you are ready to purge it from the list you can hit the trash can and it will delete it.
+
+My biggest challenge was I did not know Django a week ago, but I was having trouble getting my python projects to do what I wanted and an internet search showed me that Django had the resources to make what I wanted if I learned how to use it.  So I scoured the docs, went thru a lot of trial ad error, consulted many smart people I know, and even found a pretty good expert that has videos that explained things in a way that made sense.
+
+My favorite part of my code is where I figured out how to display the incomplete tasks to the user.  (switch between users) I figured out how to use a pluralizer and have it recognize how many tasks a user had and use the proper grammar.
+
+Thank you for viewing my project coming up in version 2 there will be a custom registration page, due dates with notifications, and better use of the task description.
+
+Goodbye
