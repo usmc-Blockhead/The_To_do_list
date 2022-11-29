@@ -35,14 +35,14 @@
             <i><s><a href={% url 'task-update' task.id %}>{{task|title}}</a></s></i>
             <i><s><a href={% url 'task-update' task.id %}>{{task.description|title}}</a></s></i>
         </div>
-        <a class="delete-link" href="{% url 'task-delete' task.id %}">&#215;</a>
+        <a class="delete-link" href="{% url 'task-delete' task.id %}">&#x1f5d1;</a>
         {% else %}
         <div class="task-title">
             <div class="task-incomplete-icon"></div>
             <a href={% url 'task-update' task.id %}>{{task|title}}</a>
             <a href={% url 'task-update' task.id %}>{{task.description|title}}</a>
         </div>
-        <a class="delete-link" href="{% url 'task-delete' task.id %}">&#215;</a>
+        <a class="delete-link" href="{% url 'task-delete' task.id %}">&#x1f5d1;</a>
         {% endif %}
     </div>
     {% empty %}

@@ -2,14 +2,16 @@
 
 {% block content%}
 
-<h1>Login</h1>
+<div class="header-bar">
+    <h1>Login</h1>
+</div>
 
 <form method="POST">
     {% csrf_token %}
     {{form.as_p}}
-    <input type="submit" value="Login" />
+    <input class="button" type="submit" value="Login" />
 </form>
 
-<p> Do you need an account? <a href="{% url 'register' %}">Register</a></p>
+<p> Do you need an account? <a class="login-link" href="{% url 'register' %}">Register</a></p>
 
 {% endblock content %}
