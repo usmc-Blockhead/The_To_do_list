@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-7xw#wvnvlp0@9t9mb7k_l3+iw3hr^!j6-%#%gg&79pwz_1d#ja
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    squid-app-ncuno.ondigitalocean.app
+    'squid-app-ncuno.ondigitalocean.app'
 ]
 
 
