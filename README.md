@@ -10,6 +10,8 @@ for
 
 **Backend, SQL, and DevOps with Python**
 
+it is hosted on Digital Ocean at https://seashell-app-uw9gu.ondigitalocean.app/
+
 ![1669684212175](image/README/1669684212175.png)
 
 ![1669683800922](image/README/1669683800922.png)
